@@ -1,0 +1,27 @@
+openeathermap API key
+
+1cb653b35e204e7117c76e327b2c955a
+
+
+
+
+API Call Format:
+
+https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+
+
+
+Capitol High School Coordinates (Baton Rouge, La)
+30.46007444496189, -91.1654476745006
+
+Production API Call:
+`https://api.openweathermap.org/data/2.5/weather?lat=30.460&lon=-91.165&exclude=minutely,
+    daily&appid=8fcd14240be7520f5b8428765ed5943b`
+
+
+
+
+`https://api.openweathermap.org/data/2.5/weather?lat=30.460&lon=-91.165&exclude=minutely,
+    daily&appid=8fcd14240be7520f5b8428765ed5943b`
+
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Weather App</h1>
+    
+    <!--Search Bar-->
+    <label>
+        City Name
+        <input type="text" name="city-name" placeholder="City" id="inputField">
+        <button onclick="search()" type ="submit" name="search" value="" id="searchButton">Search</button>
+    </label>
+    
+    <table id="weather">
+        <tr>
+            <th>City</th>
+            <th>Temp</th>
+            <th>Feels Like</th>
+            <th>Current Conditions</th>
+            <th>icon</th>
+            <th>High Temp</th>
+            <th>Low Temp</th>
+            <th>Alerts</th>
+        </tr>
+        <tbody>
+            <td id="cityName"></td>
+            <td id="temp"></td>
+            <td id="feelsLike"></td>
+            <td id="current-conditions"></td>
+            <td id="icon">
+            </td>
+            <td id="high-temp"></td>
+            <td id="low-temp"></td>
+            <td id="alerts"></td>
+        </tbody>
+    </table>
+<!--     
+    <div id="weather-current-conditions"></div>
+    <div id="weather-main"></div>
+    <div id="weather-visibility"></div>
+    <div id="weather-wind"></div> -->
+
+   
+
+   
+    <!-- <script src="fetch.js"></script> -->
+    <script src="fetch_zip.js"></script>
+</body>
+</html>
