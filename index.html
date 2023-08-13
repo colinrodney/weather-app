@@ -10,11 +10,13 @@
     <h1>Weather App</h1>
     
     <!--Search Bar-->
-    <label>
-        City Name
-        <input type="text" name="city-name" placeholder="City" id="inputField">
-        <button onclick="search()" type ="submit" name="search" value="" id="searchButton">Search</button>
-    </label>
+    <form action="/formaction" method="post" id="searchForm">
+        <label>
+            City Name
+            <input type="text" name="city-name" placeholder="City" id="inputField">
+            <button type ="submit" name="search" id="searchButton">Search</button>
+        </label>
+    </form>
     
     <table id="weather">
         <tr>
