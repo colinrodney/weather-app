@@ -2,7 +2,9 @@ console.log(`fetch_zip connected`);
 
 // // IMPORT EXTERNALFUNCTIONS
 import {search} from './searchInfo.js' // importing this allows access to DOM objects in external file
+import {fetchInfo} from './fetchInfo.js'
 
+let conditions = document.getElementById("weather")
 let cityName = document.getElementById(`cityName`)
 let temp = document.getElementById(`temp`)
 let current = document.getElementById(`current-conditions`)
@@ -17,17 +19,50 @@ let feelsLike = document.getElementById(`feelsLike`)
 
 // EVENTS
 
-let searchButton= document.getElementById(`searchButton`).addEventListener("click", (e) =>{
+// add event listener to form (TESTING)
+document.addEventListener("submit", (e) =>{
     e.preventDefault();
+    const zipCode = document.getElementById("zipCodeField")
 
-    // handle form submit
-    // let zipCode = document.getElementById(`inputField`).value
+    // FORM VALIDATION
+    if(zipCode.value !== ""){
+        search(zipCode.value)
+    }
+    else{
+        conditions.innerText = "zip cannot be empty"
+    }
+    
+        
+  
+    
+    // const zipCode = form.input
     // console.log(zipCode)
 
-    let zipCode = search()
-    console.log(zipCode)
+    // let zipCode = document.getElementById(`inputField`).value
+    // let x = search(zipCode)
+    //console.log(zipCode)
 
+    // SEND ZIP CODE TO formAction file for processing
+    // fetchInfo(zipCode)
+    
 })
+
+// let searchButton= document.getElementById(`searchButton`).addEventListener("click", (e) =>{
+//     e.preventDefault();
+
+//     // handle form submit
+//     // let zipCode = document.getElementById(`inputField`).value
+//     // console.log(zipCode)
+
+//     let zipCode = search()
+//     //console.log(zipCode)
+
+//     // SEND ZIP CODE TO formAction file for processing
+//     fetchInfo(zipCode)
+
+    
+
+// })
 
 
 

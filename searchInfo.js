@@ -5,9 +5,8 @@
 // This does NOT need to be an asyncronous function 
 // We are capturing user input value from input field!
 
-function search(){
-    let zipCode = document.getElementById(`inputField`).value
-    console.log(`search() called`)
+function search(zipCode){
+    console.log(`search() called + ${zipCode}`)
     return zipCode
     
     // console.log(`${zipCode.value}`); //DO NOT DELETE - TESTING!
