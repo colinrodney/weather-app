@@ -26,43 +26,22 @@ document.addEventListener("submit", (e) =>{
 
     // FORM VALIDATION
     if(zipCode.value !== ""){
-        search(zipCode.value)
+        //calls search function (this will become a validation test for ZIP code)
+        let x = search(zipCode.value)
+        console.log(x)
     }
     else{
         conditions.innerText = "zip cannot be empty"
     }
-    
-        
-  
-    
-    // const zipCode = form.input
-    // console.log(zipCode)
 
-    // let zipCode = document.getElementById(`inputField`).value
-    // let x = search(zipCode)
-    //console.log(zipCode)
+    // Send validated ZIP code to get weather conditions
+    let y = fetchInfo(zipCode.value)
+    console.log(y)
 
     // SEND ZIP CODE TO formAction file for processing
-    // fetchInfo(zipCode)
     
 })
 
-// let searchButton= document.getElementById(`searchButton`).addEventListener("click", (e) =>{
-//     e.preventDefault();
-
-//     // handle form submit
-//     // let zipCode = document.getElementById(`inputField`).value
-//     // console.log(zipCode)
-
-//     let zipCode = search()
-//     //console.log(zipCode)
-
-//     // SEND ZIP CODE TO formAction file for processing
-//     fetchInfo(zipCode)
-
-    
-
-// })
 
 
 
@@ -91,30 +70,7 @@ document.addEventListener("submit", (e) =>{
 // }
 
 
-// API Call happens in fetchInfo() function
-// async function fetchInfo(zipCode){
-//     console.log(zipCode) // logs user entered ZIP code
 
-//     let zip_code_url = `http://api.openweathermap.org/geo/1.0/zip?zip=${zipCode}&appid=8fcd14240be7520f5b8428765ed5943b`
-
-//     try
-//     {
-//         let zip_code_response = await fetch(zip_code_url)
-//         // let current_conditions_response = await fetch(current_codntions_url)
-
-//         let zip_code_data = zip_code_response.json()
-//         // let current_conditions_data = await current_conditions_response.json()
-
-//         // console.log(zip_code_data)
-//         // console.log(current_conditions_data)
-//         return zip_code_data // Definitely must return data from this function!
-//     }
-    
-//     catch (error){
-//         weather.innerHTML = error;
-//     } 
-
-// }
 
 
 // fetchConditions()

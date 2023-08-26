@@ -1,12 +1,16 @@
 
+
+
 // let zipCode = document.getElementById(`inputField`).value
 // console.log(zipCode)
 
 // This does NOT need to be an asyncronous function 
 // We are capturing user input value from input field!
 
+
+// this will ultimately become a zip code validation service!
 function search(zipCode){
-    console.log(`search() called + ${zipCode}`)
+    console.log(`search() called`)
     return zipCode
     
     // console.log(`${zipCode.value}`); //DO NOT DELETE - TESTING!
