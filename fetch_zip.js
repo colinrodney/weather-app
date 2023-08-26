@@ -36,17 +36,20 @@ document.addEventListener("submit", (e) =>{
     }
 
     // Send validated ZIP code to get weather conditions
-    let y = fetchConditions(zipCode.value)
-    console.log(y)
+    let obj = fetchConditions(zipCode.value)
 
-    cityName.innerText = y.name
+    // ??
+    obj.then((obj) => {
+        console.log(obj.name) // y has weather conditions...
+    })
+
+    // obj.then(function(){
+    //     console.log(obj.name)
+    // })
+
     
-    // .then(
-    //     function doSomething(){
-    //         console.log(y)
-    //     }
-    // )
-
+    
+    
 
     // SEND ZIP CODE TO formAction file for processing
     
