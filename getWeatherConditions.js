@@ -1,7 +1,7 @@
-async function getWeatherConditions(locationName){
-    console.log(`getWeatherConditions{} called + ${locationName}`)
+async function getWeatherConditions(lat, lon){
+    console.log(`getWeatherConditions{} called + ${lat} ${lon}`)
 
-    let conditions_url = `http://api.openweathermap.org/geo/1.0/direct?q=${locationName}&limit=5&appid=8fcd14240be7520f5b8428765ed5943b`
+    let conditions_url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=8fcd14240be7520f5b8428765ed5943b`
 
     try
     {
