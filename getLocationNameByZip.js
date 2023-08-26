@@ -18,13 +18,10 @@ async function getLocationNameByZip(zipCode){
 
         let obj = response.json()
         // let current_conditions_data = await current_conditions_response.json()
-        obj.then((obj) => {
-            console.log(obj.name) // y has weather conditions...
-        })
-        
+       
         // console.log(current_conditions_data)
         // return zip_code_data // Definitely must return data from this function!
-        return obj.name
+        return obj;
     }
     
     catch (error){

@@ -35,9 +35,12 @@ document.addEventListener("submit", (e) =>{
         conditions.innerText = "zip cannot be empty"
     }
 
-    // Send validated ZIP code to get weather conditions
-    let locationName = getLocationNameByZip(zipCode.value)
-    console.log(locationName);
+    // Send validated ZIP code to get info package
+    let obj = getLocationNameByZip(zipCode.value)
+
+    obj.then((obj) =>{
+        console.log(obj.name); // City name being returned!
+    })
 
     // ??
     // obj.then((obj) => {
