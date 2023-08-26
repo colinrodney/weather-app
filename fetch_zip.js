@@ -36,7 +36,8 @@ document.addEventListener("submit", (e) =>{
     }
 
     // Send validated ZIP code to get weather conditions
-    let obj = getLocationNameByZip(zipCode.value)
+    let locationName = getLocationNameByZip(zipCode.value)
+    console.log(locationName);
 
     // ??
     // obj.then((obj) => {
