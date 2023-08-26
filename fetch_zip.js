@@ -2,7 +2,7 @@ console.log(`fetch_zip connected`);
 
 // // IMPORT EXTERNALFUNCTIONS
 import {search} from './searchInfo.js' // importing this allows access to DOM objects in external file
-import {fetchConditions} from './fetchConditions.js'
+import {getLocationNameByZip} from './getLocationNameByZip.js'
 // import {renderInfo} from './renderInfo.js'
 
 let conditions = document.getElementById("weather")
@@ -36,7 +36,7 @@ document.addEventListener("submit", (e) =>{
     }
 
     // Send validated ZIP code to get weather conditions
-    let obj = fetchConditions(zipCode.value)
+    let obj = getLocationNameByZip(zipCode.value)
 
     // ??
     // obj.then((obj) => {
@@ -71,8 +71,8 @@ document.addEventListener("submit", (e) =>{
     
 //     // console.log(`${zipCode.value}`); DO NOT DELETE - TESTING!
   
-//     // invoke fetchConditions() + expect info to be returned
-//     let responseObj = await fetchConditions(zipCode);
+//     // invoke getLocationNameByZip() + expect info to be returned
+//     let responseObj = await getLocationNameByZip(zipCode);
 //     // console.log(responseObj);
 
 //     // getConditions(responseObj)
@@ -86,7 +86,7 @@ document.addEventListener("submit", (e) =>{
 
 
 
-// fetchConditions()
+// getLocationNameByZip()
 // async function showConditions(responseObj){
 //     console.log(responseObj);
 //     let current_conditions_url = `https://api.openweathermap.org/data/2.5/weather?lat=${responseObj.lat}&lon=${responseObj.lon}&units=imperial&appid=8fcd14240be7520f5b8428765ed5943b`
@@ -105,6 +105,6 @@ document.addEventListener("submit", (e) =>{
 
 
 
-// renderInfo() - Makes init call to fetchConditions() function!!
+// renderInfo() - Makes init call to getLocationNameByZip() function!!
 
 
