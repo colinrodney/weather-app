@@ -1,6 +1,6 @@
 openeathermap API key
 
-1cb653b35e204e7117c76e327b2c955a
+8fcd14240be7520f5b8428765ed5943b
 
 
 
@@ -25,3 +25,9 @@ Production API Call:
     daily&appid=8fcd14240be7520f5b8428765ed5943b`
 
 
+Geocoding API Call (by city name- DEPRECATED/ NO SUPPORT)
+
+Ex:
+http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid={API key}
+
+http://api.openweathermap.org/geo/1.0/direct?q={cityName}&limit=5&appid={API key}

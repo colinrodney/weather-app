@@ -3,6 +3,7 @@ console.log(`fetch_zip connected`);
 // // IMPORT EXTERNALFUNCTIONS
 import {search} from './searchInfo.js' // importing this allows access to DOM objects in external file
 import {getLocationNameByZip} from './getLocationNameByZip.js'
+import {getWeatherConditions} from "./getWeatherConditions.js"
 // import {renderInfo} from './renderInfo.js'
 
 let conditions = document.getElementById("weather")
@@ -39,21 +40,16 @@ document.addEventListener("submit", (e) =>{
     let obj = getLocationNameByZip(zipCode.value)
 
     obj.then((obj) =>{
-        console.log(obj.name); // City name being returned!
+        // console.log(obj.name); // City name being returned!
+        let lattitude = JSON.stringify(obj.lat)
+        let longitude = JSON.stringify(obj.lon)
+        console.log(lattitude, longitude)
+
+        // Call getWeatherConditions() passing locationName as argument to get conditions info for that location
+        let conditions = getWeatherConditions(locationName);
+        console.log(conditions)
+
     })
-
-    // ??
-    // obj.then((obj) => {
-    //     console.log(obj.name) // y has weather conditions...
-    // })
-
-    // obj.then(function(){
-    //     console.log(obj.name)
-    // })
-
-    
-    
-    
 
     // SEND ZIP CODE TO formAction file for processing
     
