@@ -6,8 +6,8 @@
 // }
 
 // API Call happens in fetchInfo() function
-async function fetchInfo(zipCode){
-    console.log(`fetchInfo() called + ${zipCode}`) // logs user entered ZIP code
+async function fetchConditions(zipCode){
+    console.log(`fetchConditions() called + ${zipCode}`) // logs user entered ZIP code
 
     let zip_code_url = `http://api.openweathermap.org/geo/1.0/zip?zip=${zipCode}&appid=8fcd14240be7520f5b8428765ed5943b`
 
@@ -30,6 +30,6 @@ async function fetchInfo(zipCode){
 
 }
 
-export {fetchInfo}
+export {fetchConditions}
 
 

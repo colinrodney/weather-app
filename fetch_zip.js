@@ -2,7 +2,8 @@ console.log(`fetch_zip connected`);
 
 // // IMPORT EXTERNALFUNCTIONS
 import {search} from './searchInfo.js' // importing this allows access to DOM objects in external file
-import {fetchInfo} from './fetchInfo.js'
+import {fetchConditions} from './fetchConditions.js'
+// import {renderInfo} from './renderInfo.js'
 
 let conditions = document.getElementById("weather")
 let cityName = document.getElementById(`cityName`)
@@ -35,7 +36,7 @@ document.addEventListener("submit", (e) =>{
     }
 
     // Send validated ZIP code to get weather conditions
-    let y = fetchInfo(zipCode.value)
+    let y = fetchConditions(zipCode.value)
     console.log(y)
 
     cityName.innerText = y.name
@@ -67,8 +68,8 @@ document.addEventListener("submit", (e) =>{
     
 //     // console.log(`${zipCode.value}`); DO NOT DELETE - TESTING!
   
-//     // invoke fetchInfo() + expect info to be returned
-//     let responseObj = await fetchInfo(zipCode);
+//     // invoke fetchConditions() + expect info to be returned
+//     let responseObj = await fetchConditions(zipCode);
 //     // console.log(responseObj);
 
 //     // getConditions(responseObj)
@@ -101,48 +102,6 @@ document.addEventListener("submit", (e) =>{
 
 
 
-// renderInfo() - Makes init call to fetchInfo() function!!
+// renderInfo() - Makes init call to fetchConditions() function!!
 
-// // async function renderInfo(currentConditionsObj){
-// //     // let response = await fetchInfo();
 
-// //     // let response = await getConditions();
-    
-
-// //     // console.log(response)
-
-// //     // Iterate over response
-// //     Object.entries(currentConditionsObj).forEach(data =>{
-// //         const [key, value] = data
-
-// //         switch (key){
-
-// //             case `weather`:
-// //                 current.innerText = `${JSON.stringify(value[0].description)}`
-
-// //                 alerts.innerText = `${JSON.stringify(value[0].main)}`
-// //                 icon.innerHTML = `<img src="https://openweathermap.org/img/wn/${value[0].icon}.png">`
-// //                 break;
-
-// //             case `main`:
-// //                 temp.innerText =`${JSON.stringify(value.temp)}`
-// //                 feelsLike.innerText =`${JSON.stringify(value.feels_like)}`
-// //                 highTemp.innerText = `${JSON.stringify(value.temp_max)}`
-// //                 lowTemp.innerText = `${JSON.stringify(value.temp_min)}`
-// //                 break;
-            
-// //             case`name`:
-// //                 cityName.innerText = `${JSON.stringify(value)}`
-// //                 break;
-
-// //         }   
-
-// //     // console.log(`render info function has been called` + ` ` + JSON.stringify(responseObj.name))
-
-// //     // convert JSON object to array such that we can iterate -
-
-   
-
-    
-// //     })
-// }
