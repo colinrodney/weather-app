@@ -39,9 +39,9 @@ document.addEventListener("submit", (e) =>{
     let obj = fetchConditions(zipCode.value)
 
     // ??
-    obj.then((obj) => {
-        console.log(obj.name) // y has weather conditions...
-    })
+    // obj.then((obj) => {
+    //     console.log(obj.name) // y has weather conditions...
+    // })
 
     // obj.then(function(){
     //     console.log(obj.name)

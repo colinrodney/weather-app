@@ -13,15 +13,18 @@ async function fetchConditions(zipCode){
 
     try
     {
-        let zip_code_response = await fetch(zip_code_url)
+        let response = await fetch(zip_code_url)
         // let current_conditions_response = await fetch(current_codntions_url)
 
-        let zip_code_data = zip_code_response.json()
+        let obj = response.json()
         // let current_conditions_data = await current_conditions_response.json()
-
-        // console.log(zip_code_data)
+        obj.then((obj) => {
+            console.log(obj.name) // y has weather conditions...
+        })
+        
         // console.log(current_conditions_data)
-        return zip_code_data // Definitely must return data from this function!
+        // return zip_code_data // Definitely must return data from this function!
+        return obj.name
     }
     
     catch (error){
