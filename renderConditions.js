@@ -1,6 +1,6 @@
 async function renderConditions(conditions){
     conditions.then(function(conditions){
-        console.log(conditions.name) // TESTING
+        console.log(conditions) // TESTING
 
         Object.entries(conditions).forEach(data =>{
         const [key, value] = data
@@ -8,6 +8,18 @@ async function renderConditions(conditions){
         switch (key){
             case "name":
                 cityName.innerText = `${JSON.stringify(value)}`
+                break;
+
+            case `main`:
+                temp.innerText =`${JSON.stringify(value.temp)}`
+                feelsLike.innerText =`${JSON.stringify(value.feels_like)}`
+                // highTemp.innerText = `${JSON.stringify(value.temp_max)}`
+                // lowTemp.innerText = `${JSON.stringify(value.temp_min)}`
+                break;
+
+            case `weather`:
+                currentConditions.innerText = (`${JSON.stringify(value[0].description)}`)
+
                 
         
         

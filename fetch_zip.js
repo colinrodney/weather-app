@@ -9,7 +9,7 @@ import {renderConditions} from './renderConditions.js'
 let conditions = document.getElementById("weather")
 let cityName = document.getElementById(`cityName`)
 let temp = document.getElementById(`temp`)
-let current = document.getElementById(`current-conditions`)
+let currentConditions = document.getElementById(`current-conditions`)
 let highTemp = document.getElementById(`high-temp`)
 let lowTemp = document.getElementById(`low-temp`)
 let alerts = document.getElementById(`alerts`)
