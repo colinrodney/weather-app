@@ -2,23 +2,19 @@ async function renderConditions(conditions){
     conditions.then(function(conditions){
         console.log(conditions.name) // TESTING
 
+        Object.entries(conditions).forEach(data =>{
+        const [key, value] = data
+        
+        switch (key){
+            case "name":
+                cityName.innerText = `${JSON.stringify(value)}`
+                
+        
+        
+        }
+        })
+
 })
-
-
-
-
-
-    // Object.entries(conditions).forEach(data =>{
-    // const [key, value] = data
-
-    // switch (key){
-    //     case "name":
-    //         // cityName.innerText = `${JSON.stringify(value)}`
-    //         console.log(`my name is...`)
-
-
-    // }
-    // })
 }
 
 export {renderConditions}
