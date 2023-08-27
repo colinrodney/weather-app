@@ -47,7 +47,7 @@ document.addEventListener("submit", (e) =>{
 
         // Call getWeatherConditions() passing locationName as argument to get conditions info for that location
         let conditions = getWeatherConditions(lattitude, longitude);
-        console.log(conditions) // we ARE getting weather conditions- send this info to some function to be rendered to screen!
+        // console.log(conditions) // we ARE getting weather conditions- send this info to some function to be rendered to screen!
 
         renderConditions(conditions)
     })

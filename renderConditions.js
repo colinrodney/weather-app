@@ -1,5 +1,24 @@
 async function renderConditions(conditions){
-    console.log(`render conditions() called...`)
+    conditions.then(function(conditions){
+        console.log(conditions.name) // TESTING
+
+})
+
+
+
+
+
+    // Object.entries(conditions).forEach(data =>{
+    // const [key, value] = data
+
+    // switch (key){
+    //     case "name":
+    //         // cityName.innerText = `${JSON.stringify(value)}`
+    //         console.log(`my name is...`)
+
+
+    // }
+    // })
 }
 
 export {renderConditions}
@@ -13,8 +32,8 @@ export {renderConditions}
 // //     // console.log(response)
 
 // //     // Iterate over response
-// //     Object.entries(currentConditionsObj).forEach(data =>{
-// //         const [key, value] = data
+//     Object.entries(currentConditionsObj).forEach(data =>{
+//         const [key, value] = data
 
 // //         switch (key){
 
