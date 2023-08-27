@@ -4,7 +4,7 @@ console.log(`fetch_zip connected`);
 import {search} from './searchInfo.js' // importing this allows access to DOM objects in external file
 import {getLocationNameByZip} from './getLocationNameByZip.js'
 import {getWeatherConditions} from "./getWeatherConditions.js"
-// import {renderInfo} from './renderInfo.js'
+import {renderConditions} from './renderConditions.js'
 
 let conditions = document.getElementById("weather")
 let cityName = document.getElementById(`cityName`)
@@ -49,6 +49,7 @@ document.addEventListener("submit", (e) =>{
         let conditions = getWeatherConditions(lattitude, longitude);
         console.log(conditions) // we ARE getting weather conditions- send this info to some function to be rendered to screen!
 
+        renderConditions(conditions)
     })
 
     // SEND ZIP CODE TO formAction file for processing

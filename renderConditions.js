@@ -1,3 +1,9 @@
+async function renderConditions(conditions){
+    console.log(`render conditions() called...`)
+}
+
+export {renderConditions}
+
 // // async function renderInfo(currentConditionsObj){
 // //     // let response = await fetchConditions();
 
