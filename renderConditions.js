@@ -1,8 +1,10 @@
-async function renderConditions(conditions){
-    conditions.then(function(conditions){
-        console.log(conditions) // TESTING
+import {currentConditions} from "./fetch_zip.js"
 
-        Object.entries(conditions).forEach(data =>{
+async function renderConditions(weatherConditions){
+    weatherConditions.then(function(weatherConditions){
+        console.log(weatherConditions) // TESTING
+
+        Object.entries(weatherConditions).forEach(data =>{
         const [key, value] = data
         
         switch (key){
@@ -18,7 +20,8 @@ async function renderConditions(conditions){
                 break;
 
             case `weather`:
-                currentConditions.innerText = (`${JSON.stringify(value[0].description)}`)
+                currentConditions.innerText = `${JSON.stringify(value[0].description)}`
+                // console.log(currentConditions)
 
                 
         
@@ -31,16 +34,16 @@ async function renderConditions(conditions){
 
 export {renderConditions}
 
-// // async function renderInfo(currentConditionsObj){
-// //     // let response = await fetchConditions();
+// // async function renderInfo(currentweatherConditionsObj){
+// //     // let response = await fetchweatherConditions();
 
-// //     // let response = await getConditions();
+// //     // let response = await getweatherConditions();
     
 
 // //     // console.log(response)
 
 // //     // Iterate over response
-//     Object.entries(currentConditionsObj).forEach(data =>{
+//     Object.entries(currentweatherConditionsObj).forEach(data =>{
 //         const [key, value] = data
 
 // //         switch (key){

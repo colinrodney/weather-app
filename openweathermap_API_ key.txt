@@ -15,14 +15,9 @@ Capitol High School Coordinates (Baton Rouge, La)
 30.46007444496189, -91.1654476745006
 
 Production API Call:
-`https://api.openweathermap.org/data/2.5/weather?lat=30.460&lon=-91.165&exclude=minutely,
-    daily&appid=8fcd14240be7520f5b8428765ed5943b`
 
-
-
-
-`https://api.openweathermap.org/data/2.5/weather?lat=30.460&lon=-91.165&exclude=minutely,
-    daily&appid=8fcd14240be7520f5b8428765ed5943b`
+`https://api.openweathermap.org/data/2.5/
+weather?lat=${lat}&lon=${lon}&units=imperial&appid=8fcd14240be7520f5b8428765ed5943b`
 
 
 Geocoding API Call (by city name- DEPRECATED/ NO SUPPORT)

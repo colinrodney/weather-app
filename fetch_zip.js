@@ -9,7 +9,7 @@ import {renderConditions} from './renderConditions.js'
 let conditions = document.getElementById("weather")
 let cityName = document.getElementById(`cityName`)
 let temp = document.getElementById(`temp`)
-let currentConditions = document.getElementById(`current-conditions`)
+export let currentConditions = document.getElementById(`current-conditions`)
 let highTemp = document.getElementById(`high-temp`)
 let lowTemp = document.getElementById(`low-temp`)
 let alerts = document.getElementById(`alerts`)
@@ -46,10 +46,10 @@ document.addEventListener("submit", (e) =>{
         console.log(lattitude, longitude)
 
         // Call getWeatherConditions() passing locationName as argument to get conditions info for that location
-        let conditions = getWeatherConditions(lattitude, longitude);
+        let weatherConditions = getWeatherConditions(lattitude, longitude);
         // console.log(conditions) // we ARE getting weather conditions- send this info to some function to be rendered to screen!
 
-        renderConditions(conditions)
+        renderConditions(weatherConditions)
     })
 
     // SEND ZIP CODE TO formAction file for processing
