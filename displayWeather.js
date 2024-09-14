@@ -8,18 +8,19 @@ console.log(`displayWeather connected!`);
 // // IMPORT EXTERNALFUNCTIONS
 import {searchZip} from './functions.js' // importing this allows access to DOM objects in external file
 
-// let cityName = document.getElementById(`cityName`)
-// let temp = document.getElementById(`temp`)
-// let feelsLike = document.getElementById(`feelsLike`)
-// let conditions = document.getElementById("weather")
-// let icon = document.getElementById(`icon`)
-// let highTemp = document.getElementById(`high-temp`)
-// let lowTemp = document.getElementById(`low-temp`)
-// let alerts = document.getElementById(`alerts`)
-// let current = document.getElementById(`current-conditions`)
+let cityName = document.getElementById(`cityName`)
+let temp = document.getElementById(`temp`)
+let feelsLike = document.getElementById(`feelsLike`)
+let conditions = document.getElementById("weather")
+let icon = document.getElementById(`icon`)
+let highTemp = document.getElementById(`high-temp`)
+let lowTemp = document.getElementById(`low-temp`)
+let alerts = document.getElementById(`alerts`)
+let current = document.getElementById(`current-conditions`)
 // let userInput = document.getElementById(`x`)
 // let zipCode = document.getElementById(`inputField`).value
 
+var zipCode = "";
 
 // EVENTS
 
@@ -35,37 +36,20 @@ document.addEventListener("submit", (e) =>{
         console.log(`ZIP CODE SEARCHED IS ${zipCode.value}`)
 
         // invoke function to search ZIP code input by users
-        searchZip(zipCode.value)
+        // searchZip(zipCode.value)
     }
     else{
         conditions.innerText = "zip cannot be empty"
     }
 })
 
-// GET WEATHER USING ZIP CODE INPUT BY USER
+// GET WEATHER DATA USING ZIP CODE INPUT BY USER -API Call happens in fetchInfo() function
 
-// async function search(){
-//     let zipCode = document.getElementById(`inputField`).value
-    
-//     // console.log(`${zipCode.value}`); DO NOT DELETE - TESTING!
-  
-//     // invoke fetchInfo() + expect info to be returned
-//     let responseObj = await fetchInfo(zipCode);
-//     // console.log(responseObj);
+async function getWeatherData(zipCode){
+    console.log(`forecast for ${zipCode} COMING UP...`) // logs user entered ZIP code
+}
 
-//     // getConditions(responseObj)
-
-//     let currentConditionsObj = await showConditions(responseObj)
-//     console.log(currentConditionsObj) // this needs to be in JSON format!!
-//     renderInfo(currentConditionsObj)
-// }
-
-
-// API Call happens in fetchInfo() function
-// async function fetchInfo(zipCode){
-//     console.log(zipCode) // logs user entered ZIP code
-
-//     let zip_code_url = `http://api.openweathermap.org/geo/1.0/zip?zip=${zipCode}&appid=8fcd14240be7520f5b8428765ed5943b`
+ // let zip_code_url = `http://api.openweathermap.org/geo/1.0/zip?zip=${zipCode}&appid=8fcd14240be7520f5b8428765ed5943b`
 
 //     try
 //     {
@@ -150,4 +134,22 @@ document.addEventListener("submit", (e) =>{
 
     
 // //     })
+// }
+
+
+
+// async function search(){
+//     let zipCode = document.getElementById(`inputField`).value
+    
+//     // console.log(`${zipCode.value}`); DO NOT DELETE - TESTING!
+  
+//     // invoke fetchInfo() + expect info to be returned
+//     let responseObj = await fetchInfo(zipCode);
+//     // console.log(responseObj);
+
+//     // getConditions(responseObj)
+
+//     let currentConditionsObj = await showConditions(responseObj)
+//     console.log(currentConditionsObj) // this needs to be in JSON format!!
+//     renderInfo(currentConditionsObj)
 // }
