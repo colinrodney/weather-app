@@ -1,6 +1,7 @@
 // THIS FILE USES searchZip() function imported from functions.js fileto
 // validate form ensuring user has entered a zip code
 // Captures zip code such as to prepare to send zip code to retrieve weather forecast
+//NOTE: THIS FILE INVOKES THE searchZip() FUNCTION AND CONTAINS ZIP CODE AS INPUT BY USER!
 
 console.log(`fetch_zip connected`);
 
