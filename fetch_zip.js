@@ -1,32 +1,40 @@
+// THIS FILE USES searchZip() function imported from functions.js fileto
+// validate form ensuring user has entered a zip code
+// Captures zip code such as to prepare to send zip code to retrieve weather forecast
+
 console.log(`fetch_zip connected`);
 
 // // IMPORT EXTERNALFUNCTIONS
-import {search} from './searchInfo.js' // importing this allows access to DOM objects in external file
-import {fetchInfo} from './fetchInfo.js'
+import {searchZip} from './functions.js' // importing this allows access to DOM objects in external file
 
-let conditions = document.getElementById("weather")
-let cityName = document.getElementById(`cityName`)
-let temp = document.getElementById(`temp`)
-let current = document.getElementById(`current-conditions`)
-let highTemp = document.getElementById(`high-temp`)
-let lowTemp = document.getElementById(`low-temp`)
-let alerts = document.getElementById(`alerts`)
-let icon = document.getElementById(`icon`)
-let feelsLike = document.getElementById(`feelsLike`)
+// let cityName = document.getElementById(`cityName`)
+// let temp = document.getElementById(`temp`)
+// let feelsLike = document.getElementById(`feelsLike`)
+// let conditions = document.getElementById("weather")
+// let icon = document.getElementById(`icon`)
+// let highTemp = document.getElementById(`high-temp`)
+// let lowTemp = document.getElementById(`low-temp`)
+// let alerts = document.getElementById(`alerts`)
+// let current = document.getElementById(`current-conditions`)
 // let userInput = document.getElementById(`x`)
 // let zipCode = document.getElementById(`inputField`).value
 
 
 // EVENTS
 
-// add event listener to form (TESTING)
+// add event listener to CAPTURE ZIP CODE + VALIDATE FORM
 document.addEventListener("submit", (e) =>{
     e.preventDefault();
     const zipCode = document.getElementById("zipCodeField")
+    console.log(zipCode)
+
 
     // FORM VALIDATION
     if(zipCode.value !== ""){
-        search(zipCode.value)
+        console.log(`ZIP CODE SEARCHED IS ${zipCode.value}`)
+
+        // invoke function to search ZIP code input by users
+        searchZip(zipCode.value)
     }
     else{
         conditions.innerText = "zip cannot be empty"

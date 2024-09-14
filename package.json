@@ -1,5 +1,15 @@
 {
   "dependencies": {
+    "express": "^4.19.2",
     "node-fetch": "^2.6.7"
-  }
+  },
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Weather app using vanilla JavaScript, HTML, and CSS",
+  "main": "fetch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }

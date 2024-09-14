@@ -8,15 +8,15 @@ let highTemp = document.getElementById(`high-temp`)
 let lowTemp = document.getElementById(`low-temp`)
 let alerts = document.getElementById(`alerts`)
 let icon = document.getElementById(`icon`)
-let x = document.getElementById(`x`)
+// let x = document.getElementById(`x`)
 
-function search(){
-    document.getElementById(`searchButton`).value
-    let query = location.search;
-    console.log(`${x.value}`);
-    console.log(query);
+// function search(){
+//     document.getElementById(`searchButton`).value
+//     let query = location.search;
+//     console.log(`${x.value}`);
+//     console.log(query);
 
-}
+// }
 
 
 async function fetchInfo(){

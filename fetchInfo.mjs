@@ -1,4 +1,4 @@
-
+// TAKE ZIP CODE + FETCH WEATHER INFO> RETURN IN JSON FORMAT
 
 // function fetchInfo(userInput){
 //     console.log(`fetchInfo() function`)
@@ -30,6 +30,6 @@ async function fetchInfo(zipCode){
 
 }
 
-export {fetchInfo}
+export {fetchInfo};
 
 
