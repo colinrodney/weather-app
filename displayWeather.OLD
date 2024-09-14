@@ -1,4 +1,4 @@
-console.log(`fetch connected`);
+console.log(`display weather connected!`);
 
 
 let cityName = document.getElementById(`cityName`)

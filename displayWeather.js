@@ -3,7 +3,7 @@
 // Captures zip code such as to prepare to send zip code to retrieve weather forecast
 //NOTE: THIS FILE INVOKES THE searchZip() FUNCTION AND CONTAINS ZIP CODE AS INPUT BY USER!
 
-console.log(`fetch_zip connected`);
+console.log(`displayWeather connected!`);
 
 // // IMPORT EXTERNALFUNCTIONS
 import {searchZip} from './functions.js' // importing this allows access to DOM objects in external file
@@ -23,7 +23,7 @@ import {searchZip} from './functions.js' // importing this allows access to DOM 
 
 // EVENTS
 
-// add event listener to CAPTURE ZIP CODE + VALIDATE FORM
+// event listener to CAPTURE ZIP CODE + VALIDATE FORM
 document.addEventListener("submit", (e) =>{
     e.preventDefault();
     const zipCode = document.getElementById("zipCodeField")
@@ -40,48 +40,9 @@ document.addEventListener("submit", (e) =>{
     else{
         conditions.innerText = "zip cannot be empty"
     }
-    
-        
-  
-    
-    // const zipCode = form.input
-    // console.log(zipCode)
-
-    // let zipCode = document.getElementById(`inputField`).value
-    // let x = search(zipCode)
-    //console.log(zipCode)
-
-    // SEND ZIP CODE TO formAction file for processing
-    // fetchInfo(zipCode)
-    
 })
 
-// let searchButton= document.getElementById(`searchButton`).addEventListener("click", (e) =>{
-//     e.preventDefault();
-
-//     // handle form submit
-//     // let zipCode = document.getElementById(`inputField`).value
-//     // console.log(zipCode)
-
-//     let zipCode = search()
-//     //console.log(zipCode)
-
-//     // SEND ZIP CODE TO formAction file for processing
-//     fetchInfo(zipCode)
-
-    
-
-// })
-
-
-
-
-
-
-
-
-
-
+// GET WEATHER USING ZIP CODE INPUT BY USER
 
 // async function search(){
 //     let zipCode = document.getElementById(`inputField`).value
