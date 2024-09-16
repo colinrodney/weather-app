@@ -20,28 +20,26 @@ let current = document.getElementById(`current-conditions`)
 // let userInput = document.getElementById(`x`)
 // let zipCode = document.getElementById(`inputField`).value
 
-var zipCode = "";
+// var zipCode = "";
+// console.log(`ZIP CODE SHOULD BE EMPTY!: ${zipCode}`)
 
-// EVENTS
 
-// event listener to CAPTURE ZIP CODE + VALIDATE FORM
+
+// EVENT LISTENER 
 document.addEventListener("submit", (e) =>{
     e.preventDefault();
     const zipCode = document.getElementById("zipCodeField")
-    console.log(zipCode)
-
+    // console.log(zipCode)
 
     // FORM VALIDATION
     if(zipCode.value !== ""){
         console.log(`ZIP CODE SEARCHED IS ${zipCode.value}`)
-
-        // invoke function to search ZIP code input by users
-        // searchZip(zipCode.value)
     }
     else{
         conditions.innerText = "zip cannot be empty"
     }
 })
+
 
 // GET WEATHER DATA USING ZIP CODE INPUT BY USER -API Call happens in fetchInfo() function
 
