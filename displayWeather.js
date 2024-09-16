@@ -6,7 +6,7 @@
 console.log(`displayWeather connected!`);
 
 // // IMPORT EXTERNALFUNCTIONS
-import {searchZip} from './functions.js' // importing this allows access to DOM objects in external file
+import {searchZip, getWeatherInfo} from './functions.js' // importing this allows access to DOM objects in external file
 
 let cityName = document.getElementById(`cityName`)
 let temp = document.getElementById(`temp`)
@@ -38,8 +38,11 @@ document.addEventListener("submit", (e) =>{
     else{
         conditions.innerText = "zip cannot be empty"
     }
-})
 
+
+    // INVOKE CALL to seachZip() function to e
+   
+})
 
 // GET WEATHER DATA USING ZIP CODE INPUT BY USER -API Call happens in fetchInfo() function
 
