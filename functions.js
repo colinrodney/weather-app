@@ -83,4 +83,4 @@ async function getWeatherInfo(zipCode){
 
 // }
 
-export { searchZip };
+export { searchZip, getWeatherInfo };
