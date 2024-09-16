@@ -26,7 +26,8 @@ function searchZip(zipCode){
 async function getWeatherInfo(zipCode){
     console.log(`ZIP CAPTURED IN GET WEATHER INFO FUNCTION ${zipCode}`) // logs user entered ZIP code
 
-    let zip_code_url = `http://api.openweathermap.org/geo/1.0/zip?zip=${zipCode}&appid=8fcd14240be7520f5b8428765ed5943b`
+    // let zip_code_url = `http://api.openweathermap.org/geo/1.0/zip?zip=${zipCode}&appid=8fcd14240be7520f5b8428765ed5943b`
+    let zip_code_url = `https://api.openweathermap.org/data/2.5/weather?zip=${zipCode},&appid=8fcd14240be7520f5b8428765ed5943b`
 
     try
     {
