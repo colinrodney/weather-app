@@ -40,15 +40,16 @@ document.addEventListener("submit", (e) =>{
     }
 
 
-    // INVOKE CALL to seachZip() function to e
+    // INVOKE CALL to getWeatherInfo() function sending zipCode as parameter
+    let currentWeatherData = getWeatherInfo(zipCode.value)
+    console.log(currentWeatherData)
    
 })
+//END MAIN CLOSURE SCOPE
 
 // GET WEATHER DATA USING ZIP CODE INPUT BY USER -API Call happens in fetchInfo() function
 
-async function getWeatherData(zipCode){
-    console.log(`forecast for ${zipCode} COMING UP...`) // logs user entered ZIP code
-}
+
 
  // let zip_code_url = `http://api.openweathermap.org/geo/1.0/zip?zip=${zipCode}&appid=8fcd14240be7520f5b8428765ed5943b`
 
