@@ -88,4 +88,4 @@ function showWeather(){}
 
 // }
 
-export { searchZip, getWeatherInfo };
+export { searchZip, getWeatherInfo, showWeather };

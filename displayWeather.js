@@ -6,7 +6,7 @@
 console.log(`displayWeather connected!`);
 
 // // IMPORT EXTERNALFUNCTIONS
-import {searchZip, getWeatherInfo} from './functions.js' // importing this allows access to DOM objects in external file
+import {searchZip, getWeatherInfo, showWeather} from './functions.js' // importing this allows access to DOM objects in external file
 
 let cityName = document.getElementById(`cityName`)
 let temp = document.getElementById(`temp`)
