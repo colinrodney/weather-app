@@ -46,8 +46,10 @@ document.addEventListener("submit", (e) =>{
 
     
     async function showWeather(){
-        let x = await currentWeatherData
-        console.log(x.name)
+        let forecast= await currentWeatherData
+        console.log(forecast.name)
+        
+
     }
 
     showWeather()
