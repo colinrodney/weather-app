@@ -45,6 +45,8 @@ document.addEventListener("submit", (e) =>{
     let currentWeatherData = getWeatherInfo(zipCode.value)
 
     
+    // THIS FUNCTION UNPACKS OBJECT RETURNED FROM CALL TO getWeatherInfo()
+    // and unpacks object properties using JavaScript object destructuring
     async function showWeather(){
         let response = await currentWeatherData
         console.log(response.name)
@@ -53,9 +55,32 @@ document.addEventListener("submit", (e) =>{
         Object.entries(response).forEach(data =>{
             const [key, value] = data
             console.log(data)
+
+            // DECISION STRUCTURE FOR DISPLAYING DATA
+            switch (key){
+
+                case `weather`:
+                    current.innerText = `${JSON.stringify(value[0].description)}`
+    
+                    alerts.innerText = `${JSON.stringify(value[0].main)}`
+                    icon.innerHTML = `<img src="https://openweathermap.org/img/wn/${value[0].icon}.png">`
+                    break;
+    
+                case `main`:
+                    temp.innerText =`${JSON.stringify(value.temp)}`
+                    highTemp.innerText = `${JSON.stringify(value.temp_max)}`
+                    lowTemp.innerText = `${JSON.stringify(value.temp_min)}`
+                    break;
+                
+                case`name`:
+                    cityName.innerText = `${JSON.stringify(value)}`
+                    break;
+            }
+    
         })
     }
 
+    // CALL showWeather function
     showWeather()
 
     // console.log(currentWeatherData)
