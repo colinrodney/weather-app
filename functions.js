@@ -49,6 +49,10 @@ async function getWeatherInfo(zipCode){
 }
 
 
+// showWeather() function
+function showWeather(){}
+
+
 
 
 
