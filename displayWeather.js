@@ -41,10 +41,42 @@ document.addEventListener("submit", (e) =>{
 
 
     // INVOKE CALL to getWeatherInfo() function sending zipCode as parameter
+    //  THIS HAS ALL INFO WE NEED TO SHOW INFO ON SCREEN!
     let currentWeatherData = getWeatherInfo(zipCode.value)
-    console.log(currentWeatherData)
-   
+
+    
+    async function showWeather(){
+        let x = await currentWeatherData
+        console.log(x.name)
+    }
+
+    showWeather()
+
+    // console.log(currentWeatherData)
+    // cityName.innerText = `${JSON.stringify(currentWeatherData)}`
 })
+
+//     Object.entries(currentWeatherData).forEach(data =>{
+//         const [key, value] = data
+//         // console.log(data)
+
+//         switch (key){
+//             case`name`:
+//                 cityName.innerText = `${JSON.stringify(value)}`
+//                 break;
+//         }
+//     })
+// })
+
+
+    // NOT WORKING - MAY NOT NEED THIS
+    // let showForecast = showWeather(currentWeatherData)
+    // console.log(showForecast)
+
+    // let something = showWeather(currentWeatherData)
+    // console.log(something);
+   
+
 //END MAIN CLOSURE SCOPE
 
 // GET WEATHER DATA USING ZIP CODE INPUT BY USER -API Call happens in fetchInfo() function

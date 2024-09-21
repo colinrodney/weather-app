@@ -1,3 +1,7 @@
+// DOM objects used in showWeather function
+// let cityName = document.getElementById(`cityName`)
+
+
 // ALL FUNCTIONS REQUIRED TO RUN APPLICATION ARE EXPORTED FROM THIS FILE
 // AND IMPORTED INTO THEIR RESPECTIVE FILES
 // SEARCH FUNCTION
@@ -23,6 +27,7 @@ function searchZip(zipCode){
 
 // getWeatherInfo() function
 // USER ENTERED ZIP CODE SENT IN API Call
+// RETURNS PROMISE OBJECT W/ WEATHER INFO
 async function getWeatherInfo(zipCode){
     console.log(`ZIP CAPTURED IN GET WEATHER INFO FUNCTION ${zipCode}`) // logs user entered ZIP code
 
@@ -50,7 +55,60 @@ async function getWeatherInfo(zipCode){
 
 
 // showWeather() function
-function showWeather(){}
+// IF THIS FUNCTION STAYS IT NEEDS TO USE ASYNC/AWAIT TO
+// ALLOW PROPER HANDLING OF RETURNED PROMISE OBJECT
+async function showWeather(x){
+    console.log(x); // <-- THIS LOOKS TO BE WORKING! PROMISE OBJECT RETURNED!
+
+    Object.entries(x).forEach(data =>{
+        const [key, value] = data
+        console.log(data)
+
+        switch (key){
+            case`name`:
+                return cityName.innerText = `${JSON.stringify(value)}`
+                //break;
+        }
+    })
+}
+
+// async function renderInfo(){
+//     let response = await fetchInfo();
+
+//     Object.entries(response).forEach(data =>{
+//         const [key, value] = data
+
+//         switch (key){
+
+//             case `weather`:
+//                 current.innerText = `${JSON.stringify(value[0].description)}`
+
+//                 alerts.innerText = `${JSON.stringify(value[0].main)}`
+//                 icon.innerHTML = `<img src="https://openweathermap.org/img/wn/${value[0].icon}.png">`
+//                 break;
+
+//             case `main`:
+//                 temp.innerText =`${JSON.stringify(value.temp)}`
+//                 highTemp.innerText = `${JSON.stringify(value.temp_max)}`
+//                 lowTemp.innerText = `${JSON.stringify(value.temp_min)}`
+//                 break;
+            
+//             case`name`:
+//                 cityName.innerText = `${JSON.stringify(value)}`
+//                 break;
+
+            
+
+//         }   
+
+
+//     // convert JSON object to array such that we can iterate -
+
+   
+
+    
+//     })
+// }
 
 
 
