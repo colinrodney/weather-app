@@ -46,10 +46,14 @@ document.addEventListener("submit", (e) =>{
 
     
     async function showWeather(){
-        let forecast= await currentWeatherData
-        console.log(forecast.name)
+        let response = await currentWeatherData
+        console.log(response.name)
         
-
+        // unpack elements via JavaScript object destructuring
+        Object.entries(response).forEach(data =>{
+            const [key, value] = data
+            console.log(data)
+        })
     }
 
     showWeather()
