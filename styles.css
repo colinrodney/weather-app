@@ -29,7 +29,9 @@ footer, header, hgroup, menu, nav, section class="sectionTest" {
 	display: block;
 }
 body {
-	line-height: 1;
+	/* line-height: 1; */
+	background: #222;
+	color:antiquewhite;
 }
 ol, ul {
 	list-style: none;
@@ -52,8 +54,11 @@ table {
 	border: 2px solid black;
 }
 
-.container{
+.card{
 	border: 1px solid red;
 	width: 50%;
     margin: auto;
+	background: linear-gradient(145deg, #54a992, #5b548a);
+	/* #54a992
+	#00feba */
 }
