@@ -50,13 +50,19 @@ table {
 }
 
 /* CUSTOM ADDED CSS */
+#searchForm{
+	width: 65%;
+    margin: auto;
+}
+
 .sectionTest{
 	border: 2px solid black;
 }
 
 .card{
 	border: 1px solid red;
-	width: 50%;
+	width: 100%;
+	max-width: 576px;
     margin: auto;
 	background: linear-gradient(145deg, #54a992, #5b548a);
 	/* #54a992
