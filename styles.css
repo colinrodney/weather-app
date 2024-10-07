@@ -30,8 +30,13 @@ footer, header, hgroup, menu, nav, section class="sectionTest" {
 }
 body {
 	/* line-height: 1; */
-	background: #222;
-	color:antiquewhite;
+	/* background: #222;
+	color:antiquewhite; */
+
+	width: 65%;
+    margin: auto;
+    background: #869586ed;
+    color: antiquewhite;
 }
 ol, ul {
 	list-style: none;
@@ -57,14 +62,28 @@ table {
 
 .sectionTest{
 	border: 2px solid black;
+
+}
+
+#infoDisplay{
+	border: 2px solid;
+    width: 100%;
+    margin: auto;
 }
 
 .card{
-	border: 1px solid red;
+	/* border: 1px solid red;
 	width: 100%;
 	max-width: 576px;
     margin: auto;
 	background: linear-gradient(145deg, #54a992, #5b548a);
 	/* #54a992
-	#00feba */
+	#00feba */ */
+
+	border: 1px solid red;
+    width: 65%;
+    margin: auto;
+    max-width: 576px;
+    margin: auto;
+    background: linear-gradient(145deg, #54a992, #5b548a);
 }
