@@ -89,22 +89,25 @@ document.addEventListener("submit", (e) =>{
 })
 
 // CALL updateConditions() to trigger AJAX call to fake data URL (TESTING)
+let number_of_updateCalls = 0;
 function updateConditions(){
-    let number_of_updateCalls = 0;
     const xhttp = new XMLHttpRequest();
 
         xhttp.onload = function(){
             document.getElementById("testing").innerText = this.responseText;
-            document.getElementById("timerCount").innerText = number_of_updateCalls;
+            // document.getElementById("timerCount").innerText = number_of_updateCalls;
             console.log(number_of_updateCalls);
         }
-
-        xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true)
+        // NOTE AJAX call set to dynaically increment by 1 with number_of_updateCalls!
+        xhttp.open("GET", `https://jsonplaceholder.typicode.com/todos/${number_of_updateCalls}`, true)
         xhttp.send()
         number_of_updateCalls += 1;
+        document.getElementById("timerCount").innerText = number_of_updateCalls;
 }
 
-updateConditions();
+// SET TIMER TO CALL updateConditions() function which triggers AJAX call
+setInterval(updateConditions, "5000")
+
 //     Object.entries(currentWeatherData).forEach(data =>{
 //         const [key, value] = data
 //         // console.log(data)
