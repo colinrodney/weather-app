@@ -155,7 +155,7 @@ function updateConditions(){
 
         xhttp.onload = function(){
             document.getElementById("testing").innerText = this.responseText;
-            // console.log(this.responseText);
+            console.log(number_of_updateCalls);
         }
 
         xhttp.open(GET, "https://jsonplaceholder.typicode.com/todos/1", true)
