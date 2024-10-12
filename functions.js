@@ -151,14 +151,14 @@ async function showWeather(x){
 
 function updateConditions(){
     let number_of_updateCalls = 0;
-    const xhttp = newXMLHttpRequest();
+    const xhttp = new XMLHttpRequest();
 
         xhttp.onload = function(){
             document.getElementById("testing").innerText = this.responseText;
             console.log(number_of_updateCalls);
         }
 
-        xhttp.open(GET, "https://jsonplaceholder.typicode.com/todos/1", true)
+        xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true)
         xhttp.send()
         number_of_updateCalls += 1;
 }

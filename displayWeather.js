@@ -6,7 +6,7 @@
 console.log(`displayWeather connected!`);
 
 // // IMPORT EXTERNALFUNCTIONS
-import {searchZip, getWeatherInfo, showWeather} from './functions.js' // importing this allows access to DOM objects in external file
+import {searchZip, getWeatherInfo, showWeather, updateConditions} from './functions.js' // importing this allows access to DOM objects in external file
 
 let cityName = document.getElementById(`cityName`)
 let temp = document.getElementById(`temp`)
@@ -82,6 +82,22 @@ document.addEventListener("submit", (e) =>{
 
     // CALL showWeather function
     showWeather()
+
+    // CALL updateConditions() to trigger AJAX call to fake data URL (TESTING)
+    function updateConditions(){
+        let number_of_updateCalls = 0;
+        const xhttp = new XMLHttpRequest();
+    
+            xhttp.onload = function(){
+                document.getElementById("testing").innerText = this.responseText;
+                console.log(number_of_updateCalls);
+            }
+    
+            xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true)
+            xhttp.send()
+            number_of_updateCalls += 1;
+    }
+    updateConditions();
 
     // console.log(currentWeatherData)
     // cityName.innerText = `${JSON.stringify(currentWeatherData)}`
