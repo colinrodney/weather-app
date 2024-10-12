@@ -149,4 +149,17 @@ async function showWeather(x){
 // FUNCTION TO RUN AJAX CALL TO UPDATE WEATHER CONDITIONS EVERY n
 // AJAX + FUNCTION HERE
 
-export { searchZip, getWeatherInfo, showWeather };
+function updateConditions(){
+    let number_of_updateCalls = 0;
+    const xhttp = newXMLHttpRequest();
+
+        xhttp.onload = function(){
+            console.log(this.responseText);
+        }
+
+        xhttp.open(GET, "url", true)
+        xhttp.send()
+        number_of_updateCalls += 1;
+}
+
+export { searchZip, getWeatherInfo, showWeather, updateConditions };
