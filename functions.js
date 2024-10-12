@@ -154,10 +154,11 @@ function updateConditions(){
     const xhttp = newXMLHttpRequest();
 
         xhttp.onload = function(){
-            console.log(this.responseText);
+            document.getElementById("testing").innerText = this.responseText;
+            // console.log(this.responseText);
         }
 
-        xhttp.open(GET, "url", true)
+        xhttp.open(GET, "https://jsonplaceholder.typicode.com/todos/1", true)
         xhttp.send()
         number_of_updateCalls += 1;
 }
