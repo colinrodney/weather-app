@@ -146,4 +146,7 @@ async function showWeather(x){
 
 // }
 
+// FUNCTION TO RUN AJAX CALL TO UPDATE WEATHER CONDITIONS EVERY n
+// AJAX + FUNCTION HERE
+
 export { searchZip, getWeatherInfo, showWeather };
